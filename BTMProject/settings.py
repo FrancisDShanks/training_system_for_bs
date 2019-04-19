@@ -31,6 +31,11 @@ ALLOWED_HOSTS = [
     '192.168.8.190'
 ]
 
+# set up for django restful framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 # Application definition
 
@@ -43,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'backend.users',
+    'backend.projects',
+    'backend.apps',
 ]
 
 MIDDLEWARE = [
@@ -134,6 +141,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+# change the default auth user model
+# AUTH_USER_MODEL = "users.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
