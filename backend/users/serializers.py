@@ -14,12 +14,12 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
                   'email',
                   'phone',
                   'department',
-                  'username')
+                  'org')
 
 
 class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
-    users = serializers.HyperlinkedRelatedField(many=True, view_name='', read_only=True)
+    #users = serializers.HyperlinkedRelatedField(many=True, view_name='', read_only=True)
 
     class Meta:
         model = Organization
-        field = ('name')
+        fields = '__all__'
