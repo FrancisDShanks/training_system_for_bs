@@ -11,8 +11,8 @@ from rest_framework import viewsets
 @api_view(['GET'])
 def api_root(request, format=None):
     return Response({
-        'user-profile': reverse('backend:users:userprofile-list', request=request, format=format),
-        'organizaion': reverse('backend:users:organization-list', request=request, format=format)
+        'user-profile': reverse('backend:userprofile-list', request=request, format=format),
+        'organizaion': reverse('backend:organization-list', request=request, format=format)
     })
 
 
