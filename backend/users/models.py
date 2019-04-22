@@ -16,9 +16,9 @@ class UserProfile(models.Model):
     email = models.EmailField(max_length=100, blank=True)
     phone = models.PositiveIntegerField(blank=True)
     department = models.CharField(max_length=100, blank=True, default='ISV')
-    organization = models.ForeignKey('Organization', on_delete=models.SET_NULL, related_name='users', null=True)
+    organization = models.ForeignKey('Organization', on_delete=models.SET_NULL, related_name='user_profile', null=True)
     # TODO 用户密码字段
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_profile')
 
     class Meta:
         verbose_name = 'User Profile'

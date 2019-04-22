@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25914055-1be3-4d4b-ab91-6bc9584463cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/projects/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/users/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/users/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTMProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTMProject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BTMProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BTMProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/users/migrations/0002_auto_20190417_0920.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/users/migrations/0003_auto_20190417_0923.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/users/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +24,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BTMProject/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+              <folding>
+                <element signature="e#634#666#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BTMProject/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="145" column="2" selection-start-line="145" selection-start-column="2" selection-end-line="145" selection-end-column="2" />
+            <state relative-caret-position="301">
+              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/users/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/users/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="380">
+              <caret line="20" column="92" lean-forward="true" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -53,13 +81,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="434">
+              <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/users/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,17 +124,18 @@
         <option value="$PROJECT_DIR$/backend/apps/users/models.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/backend/apps.py" />
-        <option value="$PROJECT_DIR$/BTMProject/urls.py" />
         <option value="$PROJECT_DIR$/backend/projects/urls.py" />
-        <option value="$PROJECT_DIR$/backend/users/urls.py" />
-        <option value="$PROJECT_DIR$/backend/urls.py" />
-        <option value="$PROJECT_DIR$/backend/views.py" />
-        <option value="$PROJECT_DIR$/backend/users/serializers.py" />
         <option value="$PROJECT_DIR$/backend/users/utils.py" />
-        <option value="$PROJECT_DIR$/BTMProject/settings.py" />
-        <option value="$PROJECT_DIR$/backend/users/views.py" />
-        <option value="$PROJECT_DIR$/backend/users/models.py" />
         <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/backend/users/admin.py" />
+        <option value="$PROJECT_DIR$/backend/views.py" />
+        <option value="$PROJECT_DIR$/backend/users/models.py" />
+        <option value="$PROJECT_DIR$/backend/urls.py" />
+        <option value="$PROJECT_DIR$/backend/users/serializers.py" />
+        <option value="$PROJECT_DIR$/backend/users/views.py" />
+        <option value="$PROJECT_DIR$/BTMProject/settings.py" />
+        <option value="$PROJECT_DIR$/backend/users/urls.py" />
+        <option value="$PROJECT_DIR$/BTMProject/urls.py" />
       </list>
     </option>
   </component>
@@ -128,13 +169,6 @@
               <item name="BTMProject" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BTMProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BTMProject" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BTMProject" type="b2602c69:ProjectViewProjectNode" />
@@ -214,7 +248,7 @@
       <updated>1555485365122</updated>
       <workItem from="1555485380146" duration="1388000" />
       <workItem from="1555487213197" duration="5887000" />
-      <workItem from="1555575848102" duration="18563000" />
+      <workItem from="1555575848102" duration="30412000" />
     </task>
     <task id="LOCAL-00001" summary="create README file">
       <created>1555577361246</created>
@@ -230,11 +264,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555577611192</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4/19">
+      <created>1555666898577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555666898577</updated>
+    </task>
+    <task id="LOCAL-00004" summary="4/19">
+      <created>1555667862131</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555667862131</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25838000" />
+    <option name="totallyTimeSpent" value="37687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -303,7 +351,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create README file" />
-    <option name="LAST_COMMIT_MESSAGE" value="create README file" />
+    <MESSAGE value="4/19" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/19" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/backend/models.py" />
@@ -349,53 +398,19 @@
     <entry file="file://$PROJECT_DIR$/backend/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/rest_framework/reverse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/projects/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/users/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/users/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/users/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/django/urls/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BTMProject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -413,13 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4065">
           <caret line="398" column="6" selection-start-line="398" selection-start-column="6" selection-end-line="398" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -451,66 +459,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BTMProject/settings.py">
+    <entry file="file://$PROJECT_DIR$/backend/users/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="145" column="2" selection-start-line="145" selection-start-column="2" selection-end-line="145" selection-end-column="2" />
+        <state relative-caret-position="76">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/users/views.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        <state relative-caret-position="399">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views.py">
+    <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/django/db/models/fields/related.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="486">
+          <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/rest_framework/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="123" column="8" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1264727851/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="731" column="6" selection-start-line="731" selection-start-column="6" selection-end-line="731" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/rest_framework/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="307" column="17" selection-start-line="307" selection-start-column="17" selection-end-line="307" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/rest_framework/reverse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-174">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/rest_framework/generics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2231">
+          <caret line="47" column="60" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/users/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/users/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        <state relative-caret-position="92">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/users/urls.py">
+    <entry file="file://$USER_HOME$/anaconda3/envs/btmp/lib/python3.7/site-packages/rest_framework/routers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="3" column="38" lean-forward="true" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        <state relative-caret-position="258">
+          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="380">
+          <caret line="20" column="92" lean-forward="true" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/backend/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTMProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BTMProject/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#634#666#0" expanded="true" />
           </folding>
         </state>
       </provider>

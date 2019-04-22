@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from django.views.generic import TemplateView
+from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/', include(('backend.urls', 'backend'), namespace='backend')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
+
+    # add DRF docs
+    path(r'docs/', include_docs_urls(title='API Docs')),
 ]

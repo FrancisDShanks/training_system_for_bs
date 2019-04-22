@@ -1,10 +1,21 @@
-from .views import *
-from rest_framework.urlpatterns import format_suffix_patterns
+from . import views
+from rest_framework.routers import DefaultRouter
 from django.urls import path, re_path, include
+from rest_framework.documentation import include_docs_urls
+
+
+router = DefaultRouter()
+router.register(r'users', views.UserProfileViewSet)
+router.register(r'orgs', views.OrganizationViewSet)
 
 urlpatterns = [
-    path('org/', OrgList.as_view(), name='org-list'),
-    path('org/<int:pk>/', OrgDetail.as_view(), name='org-detail'),
-    path('users/', UserList.as_view(), name='user-list'),
-    path('users/<int:pk>/', UserDetail.as_view(), name='user-detail')
+
+    path('', include(router.urls)),
+
 ]
+
+'''
+urlpatterns += [
+    path('apt-auth/', include('rest_framework.urls')),
+]
+'''
