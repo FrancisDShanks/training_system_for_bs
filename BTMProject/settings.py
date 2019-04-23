@@ -122,6 +122,7 @@ DATABASES = {
         'PASSWORD': '85m#wVNC',
         'HOST': '192.168.8.105',
         'PORT': '5432',
+        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
     }
 }
 

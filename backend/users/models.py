@@ -30,4 +30,6 @@ class Organization(models.Model):
     name = models.CharField(max_length=100, default='beijing')
 
     class Meta:
+        verbose_name = 'Organization'
+        verbose_name_plural = 'Organization'
         db_table = 'organizations'
