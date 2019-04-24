@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Project, Activity
+from .models import Project, Activity, Material
 
 
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):
@@ -22,9 +22,31 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
         )
 
 
+class MaterialSerializer(serializers.HyperlinkedModelSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name="backend:material-detail")
+    owner = serializers.HyperlinkedRelatedField(view_name="backend:userprofile-detail", read_only=True)
+    activity = serializers.HyperlinkedRelatedField(many=True, view_name="backend:activity-detail", read_only=True)
+
+    class Meta:
+        model = Material
+        fields = (
+            'url',
+            'name',
+            'introduction',
+            'created_time',
+            'owner',
+            'resource',
+            'activity'
+        )
+
+
 class ActivitySerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(view_name="backend:activity-detail")
     project = serializers.HyperlinkedRelatedField(view_name="backend:project-detail", read_only=True)
+    # material = MaterialSerializer(many=True, read_only=True)
+    material = serializers.HyperlinkedIdentityField(many=True, view_name="backend:material-detail")
+    # material = serializers.HyperlinkedRelatedField(many=True, view_name="backend:material-detail", queryset=Material.objects.all())
+
 
     class Meta:
         model = Activity
@@ -35,6 +57,9 @@ class ActivitySerializer(serializers.HyperlinkedModelSerializer):
             'project',
             'start_time',
             'end_time',
+            'outline',
+            'introduction',
             'activity_type',
-            'details'
+            'details',
+            'material'
         )

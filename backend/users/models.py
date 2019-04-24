@@ -25,6 +25,12 @@ class UserProfile(models.Model):
         db_table = 'user_profile'
         ordering = ('created_time',)
 
+    def __str__(self):
+        return '<UserProfile> ID:{0} Name:{1} UserID:{2}'.format(self.id, self.chinese_name, self.user)
+
+    def __repr__(self):
+        return self.__str__()
+
 
 class Organization(models.Model):
     name = models.CharField(max_length=100, default='beijing')
@@ -33,3 +39,9 @@ class Organization(models.Model):
         verbose_name = 'Organization'
         verbose_name_plural = 'Organization'
         db_table = 'organizations'
+
+    def __str__(self):
+        return '<Organization> ID:{0} Name:{1}'.format(self.id, self.name)
+
+    def __repr__(self):
+        return self.__str__()

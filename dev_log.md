@@ -1,4 +1,8 @@
 # Development Logs  
+## 4/24
+add column in Activity model: outline, introduction~~, material~~  
+create Material model, serializer, viewsets  
+build basic filesystem for cover(image) and material(file)  
 ## 4/23
 created Project model, serializer, viewsets  
 created Activity model, serializer, viewsets

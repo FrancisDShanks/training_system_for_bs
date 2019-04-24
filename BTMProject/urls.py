@@ -26,4 +26,5 @@ urlpatterns = [
 
     # add DRF docs
     path(r'docs/', include_docs_urls(title='API Docs')),
+
 ]
