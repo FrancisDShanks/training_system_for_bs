@@ -6,6 +6,7 @@ from .models import Project, Activity
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
+
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
