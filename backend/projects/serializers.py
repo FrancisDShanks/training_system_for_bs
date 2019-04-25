@@ -55,6 +55,7 @@ class ActivitySerializer(serializers.HyperlinkedModelSerializer):
             'id',
             'name',
             'project',
+            'created_time',
             'start_time',
             'end_time',
             'outline',

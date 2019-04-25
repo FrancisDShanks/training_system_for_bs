@@ -49,10 +49,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'rest_framework',  # restful API
     'backend.users',
     'backend.projects',
     'backend.apps',
+    'django_filters',  # support for filter
 ]
 
 MIDDLEWARE = [

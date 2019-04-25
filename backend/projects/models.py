@@ -49,7 +49,7 @@ class Activity(models.Model):
     outline = models.TextField(null=True, blank=True)
     introduction = models.TextField(null=True, blank=True)
     # material = models.FileField(upload_to='material/', null=True, blank=True)
-    details = JSONField()
+    details = JSONField(blank=True)
 
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='activity')
 

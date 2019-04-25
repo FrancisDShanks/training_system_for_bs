@@ -1,4 +1,6 @@
 # Development Logs  
+## 4/25
+add filter and search function to Activity Model
 ## 4/24
 add column in Activity model: outline, introduction~~, material~~  
 create Material model, serializer, viewsets  
