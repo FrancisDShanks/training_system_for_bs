@@ -7,16 +7,15 @@ from .models import Project, Activity, Material
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
-
-    queryset = Project.objects.all()
+    queryset = Project.objects.all().order_by('-created_time')
     serializer_class = ProjectSerializer
 
 
 class ActivityViewSet(viewsets.ModelViewSet):
-    queryset = Activity.objects.all()
+    queryset = Activity.objects.all().order_by('-created_time')
     serializer_class = ActivitySerializer
 
 
 class MaterialViewSet(viewsets.ModelViewSet):
-    queryset = Material.objects.all()
+    queryset = Material.objects.all().order_by('-created_time')
     serializer_class = MaterialSerializer
