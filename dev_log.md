@@ -1,4 +1,7 @@
 # Development Logs  
+## 4/26
+add some validation to Activity and Project Serializer(not finish)  
+modify all exists models to add verbose name and other features
 ## 4/25
 add filter and search function to Activity Model
 ## 4/24

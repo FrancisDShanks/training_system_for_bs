@@ -6,19 +6,19 @@ from django.contrib.auth.models import User
 
 class UserProfile(models.Model):
     # TODO: default for dev
-    chinese_name = models.CharField(max_length=100, null=False, default='mouren')
-    english_name = models.CharField(max_length=100, blank=True, default='Unknown')
-    created_time = models.DateTimeField(auto_now_add=True)
+    chinese_name = models.CharField(verbose_name=u'中文名', max_length=100, null=False, default='mouren')
+    english_name = models.CharField(verbose_name=u'英文名', max_length=100, blank=True, default='Unknown')
+    created_time = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True)
     # TODO: check doc for auto_now
-    last_seen = models.DateTimeField(auto_now=True)
-    company_id = models.IntegerField()
-    position = models.CharField(max_length=100, blank=True)
-    email = models.EmailField(max_length=100, blank=True)
-    phone = models.PositiveIntegerField(blank=True)
-    department = models.CharField(max_length=100, blank=True, default='ISV')
-    organization = models.ForeignKey('Organization', on_delete=models.SET_NULL, related_name='user_profile', null=True)
+    last_seen = models.DateTimeField(verbose_name=u'更新时间', auto_now=True)
+    company_id = models.IntegerField(verbose_name=u'员工号', unique=True)
+    position = models.CharField(verbose_name=u'职位', max_length=100, blank=True)
+    email = models.EmailField(verbose_name=u'电子邮件地址', max_length=100, blank=True, unique=True)
+    phone = models.PositiveIntegerField(verbose_name=u'手机号', blank=True, unique=True)
+    department = models.CharField(verbose_name=u'部门', max_length=100, blank=True, default='ISV')
+    organization = models.ForeignKey('Organization', verbose_name=u'组织名称', on_delete=models.SET_NULL, related_name='user_profile', null=True)
     # TODO 用户密码字段
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_profile')
+    user = models.OneToOneField(User, verbose_name=u'用户', on_delete=models.CASCADE, related_name='user_profile')
 
     class Meta:
         verbose_name = 'User Profile'
@@ -33,7 +33,7 @@ class UserProfile(models.Model):
 
 
 class Organization(models.Model):
-    name = models.CharField(max_length=100, default='beijing')
+    name = models.CharField(verbose_name=u'组织名称', max_length=100, default='beijing', unique=True)
 
     class Meta:
         verbose_name = 'Organization'

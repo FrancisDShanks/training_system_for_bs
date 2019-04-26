@@ -21,6 +21,13 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
             'activity'
         )
 
+    def validate(self, data):
+        print(data)
+        if data['start_time'] >= data['end_time']:
+            raise serializers.ValidationError('end time must later than start time')
+
+        return data
+
 
 class MaterialSerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(view_name="backend:material-detail")
@@ -64,3 +71,17 @@ class ActivitySerializer(serializers.HyperlinkedModelSerializer):
             'details',
             'material'
         )
+
+    def validate(self, data):
+        print(data)
+        if data['start_time'] >= data['end_time']:
+            raise serializers.ValidationError('end time must later than start time')
+        if data['activity_type'] == 'S':
+            pass
+        elif data['activity_type'] == 'O':
+            pass
+        elif data['activity_type'] == 'A':
+            pass
+        else:
+            raise serializers.ValidationError('the activity type is invalid.')
+        return data
