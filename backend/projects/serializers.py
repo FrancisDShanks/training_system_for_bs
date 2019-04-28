@@ -49,10 +49,9 @@ class MaterialSerializer(serializers.HyperlinkedModelSerializer):
 
 class ActivitySerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(view_name="backend:activity-detail")
-    project = serializers.HyperlinkedRelatedField(view_name="backend:project-detail", read_only=True)
+    project = serializers.HyperlinkedRelatedField(view_name="backend:project-detail", queryset=Project.objects.all())
     # material = MaterialSerializer(many=True, read_only=True)
-    material = serializers.HyperlinkedIdentityField(many=True, view_name="backend:material-detail")
-    # material = serializers.HyperlinkedRelatedField(many=True, view_name="backend:material-detail", queryset=Material.objects.all())
+    material = serializers.HyperlinkedRelatedField(many=True, view_name="backend:material-detail", queryset=Material.objects.all())
 
 
     class Meta:
@@ -76,12 +75,28 @@ class ActivitySerializer(serializers.HyperlinkedModelSerializer):
         print(data)
         if data['start_time'] >= data['end_time']:
             raise serializers.ValidationError('end time must later than start time')
+        self._check_detail(data)
+        return data
+
+    @staticmethod
+    def _check_detail(data):
         if data['activity_type'] == 'S':
-            pass
+            keys = set(data['details'].keys())
+            if not keys == set(['topic', 'length', 'location', 'teacher', 'audient']):
+                raise serializers.ValidationError('the detail of Study activity is invalid.')
+            if not isinstance(data['details']['length'], (int, float))\
+                    or data['details']['length'] <= 0:
+                raise serializers.ValidationError('In Study activity details field, length must be an positive number.')
         elif data['activity_type'] == 'O':
-            pass
+            keys = set(data['details'].keys())
+            if not keys == set(['topic', 'length', 'teacher', 'audient']):
+                raise serializers.ValidationError('the detail of Online-Study activity is invalid.')
+            if not isinstance(data['details']['length'], (int, float))\
+                    or data['details']['length'] <= 0:
+                raise serializers.ValidationError('In Online-Study activity details field, length must be an positive number.')
         elif data['activity_type'] == 'A':
-            pass
+            keys = set(data['details'].keys())
+            if not keys == set(['guest', 'location']):
+                raise serializers.ValidationError('the detail of Activity activity is invalid.')
         else:
             raise serializers.ValidationError('the activity type is invalid.')
-        return data

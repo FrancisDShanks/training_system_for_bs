@@ -1,4 +1,7 @@
 # Development Logs  
+## 4/28
+more validation on Activity  
+link Django User to UserProfile
 ## 4/26
 add some validation to Activity and Project Serializer(not finish)  
 modify all exists models to add verbose name and other features

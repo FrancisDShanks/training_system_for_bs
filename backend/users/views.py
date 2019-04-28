@@ -3,8 +3,9 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
 from rest_framework import generics
-from .serializers import UserProfileSerializer, OrganizationSerializer
+from .serializers import UserProfileSerializer, OrganizationSerializer, UserSerializer
 from .models import UserProfile, Organization
+from django.contrib.auth.models import User
 from rest_framework import viewsets
 
 # Create your views here.
@@ -24,3 +25,8 @@ class UserProfileViewSet(viewsets.ModelViewSet):
 class OrganizationViewSet(viewsets.ModelViewSet):
     queryset = Organization.objects.all()
     serializer_class = OrganizationSerializer
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
