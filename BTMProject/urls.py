@@ -25,6 +25,6 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
 
     # add DRF docs
-    path(r'docs/', include_docs_urls(title='API Docs')),
+    path(r'docs/', include_docs_urls(title='API Docs', public=False)),
 
 ]

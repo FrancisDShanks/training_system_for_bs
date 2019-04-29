@@ -1,11 +1,13 @@
 from rest_framework import serializers
 from .models import Project, Activity, Material
+from backend.users.models import UserProfile
 
 
 class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     url = serializers.HyperlinkedIdentityField(view_name="backend:project-detail")
     organization = serializers.HyperlinkedRelatedField(view_name="backend:organization-detail", read_only=True)
     activity = serializers.HyperlinkedIdentityField(many=True, view_name="backend:activity-detail")
+    project_manager = serializers.HyperlinkedRelatedField(view_name="backend:userprofile-detail", queryset=UserProfile.objects.all())
 
     class Meta:
         model = Project
@@ -18,6 +20,7 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
             'organization',
             'location',
             'introduction',
+            'project_manager',
             'activity'
         )
 

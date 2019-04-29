@@ -7,6 +7,9 @@ from .serializers import UserProfileSerializer, OrganizationSerializer, UserSeri
 from .models import UserProfile, Organization
 from django.contrib.auth.models import User
 from rest_framework import viewsets
+from .filter import UserProfileFilter, OrganizationFilter
+from rest_framework import filters
+from django_filters import rest_framework as django_filter_rest_framework
 
 # Create your views here.
 @api_view(['GET'])
@@ -20,11 +23,21 @@ def api_root(request, format=None):
 class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
+    filter_backends = (django_filter_rest_framework.DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
+    filter_class = UserProfileFilter
+    search_fields = ('chinese_name', 'company_id')
+    ordering_fields = ('id', 'chinese_name', 'company_id', 'created_time')
+    ordering = ('id',)
 
 
 class OrganizationViewSet(viewsets.ModelViewSet):
     queryset = Organization.objects.all()
     serializer_class = OrganizationSerializer
+    filter_backends = (django_filter_rest_framework.DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
+    filter_class = OrganizationFilter
+    search_fields = ('name',)
+    ordering_fields = ('name', 'created_time')
+    ordering = ('name',)
 
 
 class UserViewSet(viewsets.ModelViewSet):

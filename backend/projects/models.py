@@ -10,18 +10,18 @@ class Project(models.Model):
     updated_time = models.DateTimeField(verbose_name=u'更新时间', auto_now=True)
     start_time = models.DateTimeField(verbose_name=u'开始时间', )
     end_time = models.DateTimeField(verbose_name=u'结束时间', )
-    organization = models.ForeignKey(Organization, verbose_name=u'组织名称',on_delete=models.SET_NULL,
+    organization = models.ForeignKey(Organization, verbose_name=u'组织名称', on_delete=models.SET_NULL,
                                      related_name='project', null=True)
     location = models.CharField(verbose_name=u'项目地点', max_length=200, default='some where', blank=True)
     introduction = models.TextField(verbose_name=u'项目简介', blank=True)
     cover = models.ImageField(verbose_name=u'封面', upload_to='cover/', null=True, blank=True)
-    cost_budget = models.DecimalField(verbose_name=u'花费预算', max_digits=10, decimal_places=2, blank=True)
-    cost = models.DecimalField(verbose_name=u'实际花费', max_digits=10, decimal_places=2, blank=True)
+    cost_budget = models.DecimalField(verbose_name=u'花费预算', max_digits=10, decimal_places=2, null=True, blank=True)
+    cost = models.DecimalField(verbose_name=u'实际花费', max_digits=10, decimal_places=2, null=True, blank=True)
     project_manager = models.ForeignKey(UserProfile, verbose_name=u'托管人', on_delete=models.SET_NULL,
                                         related_name='project_manager', null=True, blank=True)
     project_creator = models.ForeignKey(UserProfile, verbose_name=u'创建人', on_delete=models.SET_NULL,
                                         related_name='project_creator', null=True, blank=True)
-    price = models.DecimalField(verbose_name=u'定价', max_digits=5, decimal_places=2, blank=True)
+    price = models.DecimalField(verbose_name=u'定价', max_digits=5, decimal_places=2, null=True, blank=True)
 
     class Meta:
         verbose_name = 'Project'
@@ -32,6 +32,7 @@ class Project(models.Model):
 
     def __repr__(self):
         return self.__str__()
+
 
 
 class Activity(models.Model):
