@@ -24,5 +24,5 @@
 'DATABASE NAME': 'BTMProject'  
 'USER': 'btmadmin'  
 'PASSWORD': '85m#wVNC'  
-'HOST': '192.168.8.105'  
+'HOST': '192.168.8.128'  
 'PORT': '5432'
