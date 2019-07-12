@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '192.168.8.190'
+    '192.168.8.174'
 ]
 
 # set up for django restful framework
@@ -121,7 +121,7 @@ DATABASES = {
         'NAME': 'BTMProject',
         'USER': 'btmadmin',
         'PASSWORD': '85m#wVNC',
-        'HOST': '192.168.8.105',
+        'HOST': '192.168.8.128',
         'PORT': '5432',
         # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
     }
