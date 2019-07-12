@@ -24,9 +24,5 @@
 'DATABASE NAME': 'BTMProject'  
 'USER': 'btmadmin'  
 'PASSWORD': '85m#wVNC'  
-<<<<<<< Updated upstream
 'HOST': '192.168.8.128'  
-=======
-'HOST': Francis's PC's IP address 
->>>>>>> Stashed changes
-'PORT': '5432'
+'PORT': '5432'  
