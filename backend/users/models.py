@@ -22,7 +22,7 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, verbose_name=u'用户', on_delete=models.CASCADE, related_name='user_profile')
 
     class Meta:
-        verbose_name = 'User Profile'
+        verbose_name_plural = verbose_name = u'用户'
         db_table = 'user_profile'
         ordering = ('-created_time',)
 
@@ -37,8 +37,8 @@ class Organization(models.Model):
     name = models.CharField(verbose_name=u'组织名称', max_length=100, unique=True)
 
     class Meta:
-        verbose_name = 'Organization'
-        verbose_name_plural = 'Organization'
+        verbose_name = u'组织'
+        verbose_name_plural = u'组织'
         db_table = 'organizations'
 
     def __str__(self):
@@ -54,7 +54,7 @@ class VerifyCode(models.Model):
     add_time = models.DateTimeField(verbose_name=u'添加时间', auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = verbose_name = ''
+        verbose_name_plural = verbose_name = u'验证码'
 
     def __str__(self):
         return '<Phone_VerifyCode> code:{0} mobile:{1}'.format(self.code, self.mobile)

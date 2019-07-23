@@ -24,7 +24,7 @@ class Project(models.Model):
     price = models.DecimalField(verbose_name=u'定价', max_digits=5, decimal_places=2, null=True, blank=True)
 
     class Meta:
-        verbose_name = 'Project'
+        verbose_name_plural = verbose_name = u'项目'
         db_table = 'project'
 
     def __str__(self):
@@ -58,7 +58,7 @@ class Activity(models.Model):
     project = models.ForeignKey(Project, verbose_name=u'项目', on_delete=models.CASCADE, related_name='activity')
 
     class Meta:
-        verbose_name = 'activity'
+        verbose_name_plural = verbose_name = u'活动'
         db_table = 'activity'
 
     def __str__(self):
@@ -77,7 +77,7 @@ class Material(models.Model):
     resource = models.FileField(verbose_name=u'资源地址', upload_to='material/', null=True, blank=True)
 
     class Meta:
-        verbose_name = 'material'
+        verbose_name_plural = verbose_name = u'资料/材料'
         db_table = 'material'
 
     def __str__(self):
