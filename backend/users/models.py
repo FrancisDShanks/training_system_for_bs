@@ -12,11 +12,11 @@ class UserProfile(models.Model):
     # TODO: check doc for auto_now
     last_seen = models.DateTimeField(verbose_name=u'更新时间', auto_now=True)
     company_id = models.IntegerField(verbose_name=u'员工号', unique=True)
-    position = models.CharField(verbose_name=u'职位', max_length=100, blank=True)
+    position = models.CharField(verbose_name=u'职位', max_length=20, blank=True)
     gender = models.CharField(verbose_name=u'性别', max_length=6, choices=(('male', '男'), ('female', '女')), default='male', help_text='性别')
-    email = models.EmailField(verbose_name=u'电子邮件地址', max_length=100, unique=True)
+    email = models.EmailField(verbose_name=u'电子邮件地址', max_length=20, unique=True)
     phone = models.CharField(verbose_name=u'手机号码', max_length=20, help_text='手机号码')
-    department = models.CharField(verbose_name=u'部门', max_length=100, blank=True, default='ISV')
+    department = models.CharField(verbose_name=u'部门', max_length=20, blank=True, default='ISV')
     organization = models.ForeignKey('Organization', verbose_name=u'组织名称', on_delete=models.SET_NULL,
                                      related_name='user_profile', null=True)
     user = models.OneToOneField(User, verbose_name=u'用户', on_delete=models.CASCADE, related_name='user_profile')

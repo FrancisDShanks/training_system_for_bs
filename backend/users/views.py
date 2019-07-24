@@ -10,6 +10,7 @@ from rest_framework import viewsets
 from .filter import UserProfileFilter, OrganizationFilter
 from rest_framework import filters
 from django_filters import rest_framework as django_filter_rest_framework
+from rest_framework import mixins
 
 # Create your views here.
 @api_view(['GET'])
@@ -40,6 +41,8 @@ class OrganizationViewSet(viewsets.ModelViewSet):
     ordering = ('name',)
 
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserViewSet(mixins.RetrieveModelMixin, 
+                  mixins.ListModelMixin, 
+                  viewsets.GenericViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
