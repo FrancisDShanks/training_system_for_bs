@@ -1,9 +1,12 @@
-#from backend.users.models import UserProfile, Organization
-from ..users.models import UserProfile, Organization
+import random 
+
 from django.contrib.auth.models import User
 from faker import Faker
-import random 
-import sys
+
+#from backend.users.models import UserProfile, Organization
+from ..users.models import UserProfile, Organization
+
+
 
 
 def create_user(username,

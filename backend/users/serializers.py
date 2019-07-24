@@ -28,6 +28,7 @@ class UserProfileSerializer(serializers.HyperlinkedModelSerializer):
                   'chinese_name',
                   'english_name',
                   'created_time',
+                  'gender',
                   'company_id',
                   'position',
                   'email',
