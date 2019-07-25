@@ -13,7 +13,6 @@ urlpatterns = format_suffix_patterns([
 router = DefaultRouter()
 router.register(r'users', users_view.UserProfileViewSet)
 router.register(r'orgs', users_view.OrganizationViewSet)
-router.register(r'auth-users', users_view.UserViewSet)
 router.register(r'projects', projects_view.ProjectViewSet)
 router.register(r'activities', projects_view.ActivityViewSet)
 router.register(r'materials', projects_view.MaterialViewSet)
@@ -21,7 +20,7 @@ router.register(r'materials', projects_view.MaterialViewSet)
 urlpatterns = [
 
     path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 ]
 '''

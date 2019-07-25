@@ -1,16 +1,6 @@
 from rest_framework import serializers
 from .models import UserProfile, Organization
-from django.contrib.auth.models import User
 
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    url = serializers.HyperlinkedIdentityField(view_name="backend:user-detail")
-    user_profile = serializers.HyperlinkedRelatedField(view_name='backend:userprofile-detail',
-                                                       read_only=True)
-
-    class Meta:
-        model = User
-        fields = ('url', 'id', 'username', 'email', 'is_staff', 'user_profile')
 
 
 class UserProfileSerializer(serializers.HyperlinkedModelSerializer):
@@ -19,12 +9,13 @@ class UserProfileSerializer(serializers.HyperlinkedModelSerializer):
     organization = serializers.HyperlinkedRelatedField(view_name='backend:organization-detail',
                                                        queryset=Organization.objects.all())
     #user = serializers.HyperlinkedRelatedField(view_name='backend:user-detail', queryset=User.objects.all())
-    user = UserSerializer()
+
 
     class Meta:
         model = UserProfile
         fields = ('url',
                   'id',
+                  'username',
                   'chinese_name',
                   'english_name',
                   'created_time',
@@ -34,8 +25,7 @@ class UserProfileSerializer(serializers.HyperlinkedModelSerializer):
                   'email',
                   'phone',
                   'department',
-                  'organization',
-                  'user'
+                  'organization'
                   )
 
 

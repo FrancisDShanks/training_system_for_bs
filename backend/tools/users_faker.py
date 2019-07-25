@@ -20,8 +20,10 @@ def create_user(username,
                 department='test centre',
                 org='beijing'
                 ):
-    u = User.objects.create_user(username=username, password=password, email=email)
+    
     p = UserProfile(
+        username=username, 
+        password=password,
         chinese_name=cname,
         english_name=ename,
         company_id=company_id,
@@ -30,7 +32,6 @@ def create_user(username,
         phone=phone,
         department=department,
         organization=Organization.objects.get(name=org),
-        user=u
     )
     p.save()
 
@@ -56,8 +57,10 @@ def create_faker_user(num=1):
                 unique_cid = True
                 company_ids.append(company_id)
 
-        u = User.objects.create_user(username='_'.join((first_eng_name, last_eng_name)), password=password, email=email)
+
         p = UserProfile(
+            username='_'.join((first_eng_name, last_eng_name)),
+            password=password,
             chinese_name=fc.name(),
             english_name=full_eng_name,
             gender=gender,
@@ -67,7 +70,6 @@ def create_faker_user(num=1):
             phone=fc.phone_number(),
             department=dep[random.randint(0,3)],
             organization=org,
-            user=u
         )
         p.save()
 

@@ -3,9 +3,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
 from rest_framework import generics
-from .serializers import UserProfileSerializer, OrganizationSerializer, UserSerializer
-from .models import UserProfile, Organization
-from django.contrib.auth.models import User
+from .serializers import OrganizationSerializer, UserProfileSerializer
+from .models import Organization, UserProfile
 from rest_framework import viewsets
 from .filter import UserProfileFilter, OrganizationFilter
 from rest_framework import filters
@@ -40,9 +39,3 @@ class OrganizationViewSet(viewsets.ModelViewSet):
     ordering_fields = ('name', 'created_time')
     ordering = ('name',)
 
-
-class UserViewSet(mixins.RetrieveModelMixin, 
-                  mixins.ListModelMixin, 
-                  viewsets.GenericViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
