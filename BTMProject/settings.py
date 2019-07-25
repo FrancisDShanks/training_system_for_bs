@@ -110,6 +110,11 @@ WSGI_APPLICATION = 'BTMProject.wsgi.application'
 '''
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -121,182 +126,7 @@ DATABASES = {
         # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
     }
 }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BTMProject',
-        'USER': 'btmadmin',
-        'PASSWORD': '12345',
-        'HOST': '192.168.8.128',
-        'PORT': '5432',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
-    }
-}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
