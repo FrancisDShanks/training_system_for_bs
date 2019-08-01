@@ -25,7 +25,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     serializer_class = UserProfileSerializer
     filter_backends = (django_filter_rest_framework.DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
     filter_class = UserProfileFilter
-    search_fields = ('chinese_name', 'company_id')
+    search_fields = ('username', 'chinese_name', 'english_name', 'company_id')
     ordering_fields = ('id', 'chinese_name', 'company_id', 'created_time')
     ordering = ('id',)
 
