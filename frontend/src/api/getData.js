@@ -18,6 +18,13 @@ export const signout = () => fetch('/admin/signout');
 
 export const getAdminInfo = () => fetch('/admin/info');
 
+
+/**
+ * api请求量
+ */
+
+export const getActivityList = data => fetch('/api/getActivityList',data);
+
 /**
  * api请求量
  */
