@@ -35,6 +35,7 @@ class Project(models.Model):
             models.Index(fields=['cost_budget']),
             models.Index(fields=['cost']),
             models.Index(fields=['price']),
+            models.Index(fields=['location']),
         ]
 
     def __str__(self):

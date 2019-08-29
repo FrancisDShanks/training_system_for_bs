@@ -10,6 +10,7 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
     organization = serializers.HyperlinkedRelatedField(view_name="backend:organization-detail", read_only=True)
     activity = serializers.HyperlinkedIdentityField(many=True, view_name="backend:activity-detail")
     project_manager = serializers.HyperlinkedRelatedField(view_name="backend:userprofile-detail", queryset=UserProfile.objects.all())
+    project_creator = serializers.HyperlinkedRelatedField(view_name="backend:userprofile-detail", queryset=UserProfile.objects.all())
 
     class Meta:
         model = Project
@@ -17,12 +18,18 @@ class ProjectSerializer(serializers.HyperlinkedModelSerializer):
             'url',
             'id',
             'name',
+            'created_time',
+            'updated_time',
             'start_time',
             'end_time',
             'organization',
             'location',
             'introduction',
+            'cost_budget',
+            'cost',
+            'price',
             'project_manager',
+            'project_creator',
             'activity'
         )
 
@@ -57,7 +64,6 @@ class ActivitySerializer(serializers.HyperlinkedModelSerializer):
     project = serializers.HyperlinkedRelatedField(view_name="backend:project-detail", queryset=Project.objects.all())
     # material = MaterialSerializer(many=True, read_only=True)
     material = serializers.HyperlinkedRelatedField(many=True, view_name="backend:material-detail", queryset=Material.objects.all())
-
 
     class Meta:
         model = Activity
