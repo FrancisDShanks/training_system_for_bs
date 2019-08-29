@@ -1,3 +1,5 @@
+import json
+import ast
 from rest_framework import serializers
 from .models import Project, Activity, Material
 from backend.users.models import UserProfile
@@ -75,30 +77,34 @@ class ActivitySerializer(serializers.HyperlinkedModelSerializer):
         )
 
     def validate(self, data):
-        print(data)
+        # print(data)
         if data['start_time'] >= data['end_time']:
             raise serializers.ValidationError('end time must later than start time')
         self._check_detail(data)
         return data
 
+
     @staticmethod
     def _check_detail(data):
+        data['details'] = ast.literal_eval(data['details'])
+        print(data['details'])
+        detail = data['details']
         if data['activity_type'] == 'S':
-            keys = set(data['details'].keys())
+            keys = set(detail.keys())
             if not keys == set(['topic', 'length', 'location', 'teacher', 'audient']):
                 raise serializers.ValidationError('the detail of Study activity is invalid.')
-            if not isinstance(data['details']['length'], (int, float))\
-                    or data['details']['length'] <= 0:
+            if not isinstance(detail['length'], (int, float))\
+                    or detail['length'] <= 0:
                 raise serializers.ValidationError('In Study activity details field, length must be an positive number.')
         elif data['activity_type'] == 'O':
-            keys = set(data['details'].keys())
+            keys = set(detail.keys())
             if not keys == set(['topic', 'length', 'teacher', 'audient']):
                 raise serializers.ValidationError('the detail of Online-Study activity is invalid.')
-            if not isinstance(data['details']['length'], (int, float))\
-                    or data['details']['length'] <= 0:
+            if not isinstance(detail['length'], (int, float))\
+                    or detail['length'] <= 0:
                 raise serializers.ValidationError('In Online-Study activity details field, length must be an positive number.')
         elif data['activity_type'] == 'A':
-            keys = set(data['details'].keys())
+            keys = set(detail.keys())
             if not keys == set(['guest', 'location']):
                 raise serializers.ValidationError('the detail of Activity activity is invalid.')
         else:

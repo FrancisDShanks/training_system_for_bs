@@ -16,32 +16,36 @@ def create_projects(num=1):
     user_profiles = UserProfile.objects.all()
     
     for _ in range(num):
-        project_name = fc.sentence()
-        org = orgs[random.randint(0,len(orgs) - 1)]
-        end_time = fc.future_datetime()
-        start_time = fc.date_time_this_year()
-        introduction = fc.text()
-        cost_budget = fc.pyint()
-        cost = fc.random_int()
-        price = fc.random_int(max=cost//100)
+        try:
+            project_name = fc.sentence()
+            org = orgs[random.randint(0, len(orgs) - 1)]
+            end_time = fc.future_datetime()
+            start_time = fc.date_time_this_year()
+            introduction = fc.text()
+            cost_budget = fc.pyint()
+            cost = fc.random_int()
+            price = fc.random_int(max=cost//100)
 
-        project_manager = user_profiles[random.randint(0,len(user_profiles) - 1)]
-        project_creator = user_profiles[random.randint(0,len(user_profiles) - 1)]
+            project_manager = user_profiles[random.randint(0, len(user_profiles) - 1)]
+            project_creator = user_profiles[random.randint(0, len(user_profiles) - 1)]
 
-        p = Project(
-            name=project_name,
-            start_time=start_time,
-            end_time=end_time,
-            organization=org,
-            location=fc.street_address(),
-            introduction=introduction,
-            cost_budget=cost_budget,
-            cost=cost,
-            price=price,
-            project_manager=project_manager,
-            project_creator=project_creator
-        )
-        p.save()
+            p = Project(
+                name=project_name,
+                start_time=start_time,
+                end_time=end_time,
+                organization=org,
+                location=fc.street_address(),
+                introduction=introduction,
+                cost_budget=cost_budget,
+                cost=cost,
+                price=price,
+                project_manager=project_manager,
+                project_creator=project_creator
+            )
+            p.save()
+        except:
+            print('a duplicate occurs..')
+
 
 
 

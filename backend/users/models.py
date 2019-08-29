@@ -54,6 +54,13 @@ class UserProfile(AbstractUser):
         verbose_name_plural = verbose_name = u'用户'
         db_table = 'user_profile'
         ordering = ('-created_time',)
+        indexes = [
+            models.Index(fields=['chinese_name']),
+            models.Index(fields=['english_name']),
+            models.Index(fields=['position']),
+            models.Index(fields=['phone']),
+            models.Index(fields=['department']),
+        ]
 
     def __str__(self):
         return '<UserProfile> ID:{0} Name:{1}'.format(self.id, self.chinese_name)
@@ -68,7 +75,7 @@ class Organization(models.Model):
     class Meta:
         verbose_name = u'组织'
         verbose_name_plural = u'组织'
-        db_table = 'organizations'
+        db_table = 'organization'
 
     def __str__(self):
         return '<Organization> ID:{0} Name:{1}'.format(self.id, self.name)

@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'backend.projects',
     'backend.apps',
     'django_filters',  # support for filter
+    'django_mysql',
 ]
 
 MIDDLEWARE = [
@@ -117,12 +118,12 @@ DATABASES = {
 '''
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'BTMProject',
-        'USER': 'btmadmin',
+        'USER': 'btmp_admin',
         'PASSWORD': '12345',
         'HOST': '192.168.8.128',
-        'PORT': '5432',
+        'PORT': '3306',
         # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
     }
 }
@@ -134,7 +135,7 @@ CACHES = {
         'LOCATION': 'redis://192.168.8.174:6379/0',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-            'PASSWORD':'12345'
+            'PASSWORD': '12345'
         },
     }
 }
@@ -176,7 +177,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

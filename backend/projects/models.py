@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.postgres.fields import JSONField
+# from django.contrib.postgres.fields import JSONField
+from django_mysql.models import JSONField
 from backend.users.models import Organization, UserProfile
 
 
@@ -26,6 +27,15 @@ class Project(models.Model):
     class Meta:
         verbose_name_plural = verbose_name = u'项目'
         db_table = 'project'
+        indexes = [
+            models.Index(fields=['name'], ),
+            models.Index(fields=['created_time'],),
+            models.Index(fields=['start_time']),
+            models.Index(fields=['end_time']),
+            models.Index(fields=['cost_budget']),
+            models.Index(fields=['cost']),
+            models.Index(fields=['price']),
+        ]
 
     def __str__(self):
         return '<Project> ID: {0} Name:{1}'.format(self.id, self.name)
