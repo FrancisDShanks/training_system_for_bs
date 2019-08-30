@@ -1,8 +1,6 @@
 from django.db import models
-# from django.contrib.postgres.fields import JSONField
 from django_mysql.models import JSONField
 from backend.users.models import Organization, UserProfile
-
 
 # Create your models here.
 class Project(models.Model):

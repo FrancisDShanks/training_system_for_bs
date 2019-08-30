@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,11 +34,20 @@ ALLOWED_HOSTS = [
 
 # set up for django restful framework
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
+}
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': timedelta(days=1),  # token 有效期
 }
 
 # Application definition
@@ -55,6 +65,7 @@ INSTALLED_APPS = [
     'backend.apps',
     'django_filters',  # support for filter
     'django_mysql',
+    'rest_framework_jwt',
 ]
 
 MIDDLEWARE = [
@@ -124,7 +135,6 @@ DATABASES = {
         'PASSWORD': '12345',
         'HOST': '192.168.8.128',
         'PORT': '3306',
-        # 'OPTIONS': {            'init_command': 'SET default_storage_engine=INNODB;'        }
     }
 }
 

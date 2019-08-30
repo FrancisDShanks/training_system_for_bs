@@ -2,9 +2,7 @@ from rest_framework import serializers
 from .models import UserProfile, Organization
 
 
-
 class UserProfileSerializer(serializers.HyperlinkedModelSerializer):
-    # 太坑了！
     url = serializers.HyperlinkedIdentityField(view_name="backend:userprofile-detail")
     organization = serializers.HyperlinkedRelatedField(view_name='backend:organization-detail',
                                                        queryset=Organization.objects.all())
