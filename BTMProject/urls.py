@@ -22,7 +22,7 @@ from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/', include(('backend.urls', 'backend'), namespace='backend')),
+    url(r'^api/v1/', include(('backend.urls', 'backend'), namespace='backend')),
     url(r'^$', TemplateView.as_view(template_name="index.html")),
 
     # add DRF docs
